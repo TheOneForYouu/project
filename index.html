@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CV.css" rel="stylesheet">
+    <title>CV</title>
+</head>
+<body>
+    <div class="part1">
+        <div class="header">
+            <a class="text1">
+                CV
+            </a>
+            <button class="bt1" id="showButton" onclick="toggleVisibility()"></button>
+        </div>
+        <div class="links" id="hiddenElement">
+            <a href="#" class="l1">Qualifications</a>
+            <br>
+            <a href="#" class="l1">Experience</a>
+        </div>
+    </div>
+    <div class="part2">
+        <div class="section">
+            <div class="text2">
+            <a class="text22">
+                ujshdirtdyhertyertherthertherherthertherthertherthrehrtherherthertherthertufhioauhfoiuahuioghiouwehrgwiouheruioghweuiorhgwioeuhrguiowherioguhwerioughweiohrugwiouhuergbuiygbwyuerbgybweuiygbwyuibieryugbwuierybgweyub
+            </a>
+        </div>
+    </div>
+    <div class="card1">
+    <div class="card">
+        <div class="front-face">
+            <div class="contents front">
+                <p>uygdfguighd</p>
+                <p class="bottom-bar"></p>
+                <span>Full Stack Web Developer</span>
+            </div>
+        </div>
+        <div class="back-face">
+            <div class="contents back">
+                <h2>CHECK MY CODE</h2>
+                <span>Fallow Me</span>
+                <div class="icons">
+                    <a href="#"><i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="#"><i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    function toggleVisibility() {
+  var element = document.getElementById("hiddenElement");
+
+  
+  if (element.style.display === "none" || getComputedStyle(element).display === "none") {
+    element.style.display = "block";
+  } else {
+    element.style.display = "none";
+  }
+
+  
+  var visibilityState = element.style.display === "none" ? "hidden" : "visible";
+  history.replaceState({}, document.title, "?visibility=" + visibilityState);
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var params = new URLSearchParams(window.location.search);
+  var visibility = params.get("visibility");
+
+  if (visibility === "hidden") {
+    var element = document.getElementById("hiddenElement");
+    element.style.display = "none";
+  }
+});
+</script>
+
+</html>
